@@ -1,0 +1,6 @@
+classes: [tumor, normal]
+prompts:
+  tumor:
+    - "an H&E histology tile of carcinoma"
+  normal:
+    - "an H&E tile of benign tissue without atypia"
