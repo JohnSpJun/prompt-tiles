@@ -28,3 +28,36 @@ pip install -e .
 # Option B: requirements only
 pip install -r requirements.txt
 pip install "git+https://github.com/Mahmoodlab/CONCH.git"
+```
+### 2) Run a slide
+```
+python scripts/zs_classify.py \
+  --h5 /path/to/slide.hdf5 \
+  --prompts prompts/pancreas.yaml \
+  --out heatmaps \
+  --tile-key tile_224 \
+  --write-tumor-dataset \
+  --show-heatmap \
+  --show-grids
+```
+* --prompts points to a YAML defining classes + text prompts (see prompts/).
+* --tile-key is optional. If omitted, the first dataset starting with tile_ is used.
+
+### 3) Batch over many slides
+```
+python scripts/zs_classify.py \
+  --h5 /data/tiles/*.hdf5 \
+  --prompts prompts/pancreas.yaml \
+  --out heatmaps \
+  --show-heatmap
+```
+
+
+
+
+
+
+
+
+
+
